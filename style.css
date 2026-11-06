@@ -1097,3 +1097,22 @@ body.menu-open { overflow: hidden; }
   }
   .fade-up { opacity: 1; transform: none; }
 }
+
+/* ═══════════════ KEEP FACES VISIBLE (mobile) ═══════════════ */
+.split-img { background-position: center top; }
+
+@media (max-width: 768px) {
+  /* Hero: push text to the bottom, clear the top so faces show */
+  .hero { align-items: flex-end; min-height: 100svh; }
+  .hero-bg { background-position: center top; animation: none; transform: none; }
+  .hero-overlay {
+    background: linear-gradient(to top,
+      rgba(10,10,10,.94) 0%, rgba(10,10,10,.78) 45%,
+      rgba(10,10,10,.12) 75%, rgba(10,10,10,0) 100%);
+  }
+  .hero-logo { display: none; } /* logo is already in the navbar */
+  .hero-content { padding: 100px 24px 90px; }
+
+  /* Adultes / Enfants photos: taller, anchored to the top */
+  .split-img { min-height: 400px; background-position: center top !important; }
+}
