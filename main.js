@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (heroScroll) heroScroll.style.opacity = y > 60 ? 0 : 1;
     if (!reduceMotion) {
-      if (y < innerHeight * 1.2) {
+      if (innerWidth > 768 && y < innerHeight * 1.2) {
         heroContent.style.transform = `translateY(${y * 0.18}px)`;
         heroContent.style.opacity = Math.max(0, 1 - y / (innerHeight * 0.9));
       }
