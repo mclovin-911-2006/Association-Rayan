@@ -232,7 +232,7 @@ button { border: none; cursor: pointer; font-family: inherit; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background: url('assets/hero.png') top center/cover no-repeat;
+  background: url('hero.png') top center/cover no-repeat;
   transform: scale(1.05);
   animation: heroZoom 20s ease-in-out infinite alternate;
 }
