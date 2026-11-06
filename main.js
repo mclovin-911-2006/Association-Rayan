@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const r = img.getBoundingClientRect();
         if (r.bottom > 0 && r.top < innerHeight) {
           const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-          img.style.backgroundPosition = `center ${Math.max(20, Math.min(80, 50 - p * 30))}%`;
+          img.style.backgroundPosition = `center ${Math.max(0, Math.min(30, 12 - p * 20))}%`;
         }
       });
     }
