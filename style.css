@@ -1116,3 +1116,23 @@ body.menu-open { overflow: hidden; }
   /* Adultes / Enfants photos: taller, anchored to the top */
   .split-img { min-height: 400px; background-position: center top !important; }
 }
+
+/* ═══════════════ HERO MOBILE: photo on top, text below faces ═══════════════ */
+@media (max-width: 768px) {
+  .hero { align-items: flex-start; background: #0a0a0a; min-height: 100svh; }
+  .hero-bg {
+    bottom: auto; height: 62svh;
+    background-position: center top; background-size: cover;
+  }
+  .hero-overlay {
+    background: linear-gradient(to bottom,
+      rgba(10,10,10,.1) 0%,
+      rgba(10,10,10,0) calc(62svh - 170px),
+      #0a0a0a 62svh,
+      #0a0a0a 100%);
+  }
+  .hero-content { padding: calc(62svh - 70px) 24px 56px; }
+  .hero-headline { font-size: clamp(2.4rem, 11vw, 3.4rem); margin-bottom: 14px; }
+  .hero-sub { font-size: .92rem; margin-bottom: 20px; }
+  .hero-scroll { display: none; }
+}
